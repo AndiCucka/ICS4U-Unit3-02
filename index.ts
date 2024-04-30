@@ -25,7 +25,7 @@ function factorial(randomInt: number): number {
 
 const userInput = createPrompt(`Before factoring = `)
 const randomInt = parseInt(userInput.value)
-let IntFactorial = factorial(randomInt)
-console.log(`After factoring = ${IntFactorial}`)
+let intFactorial = factorial(randomInt)
+console.log(`After factoring = ${intFactorial}`)
 
 console.log(`\nDone.`)
