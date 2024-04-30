@@ -26,18 +26,18 @@ final class Main {
     /**
     * This method calculates the factorial of a given integer using recursion.
     *
-    * @param someInt the integer whose factorial is to be calculated
+    * @param randomInt the integer whose factorial is to be calculated
     * @return the factorial of the given integer
     */
-    public static int factorial(int someInt) {
+    public static int factorial(int randomInt) {
         int returnValue = 0;
-        if (someInt < 0) {
+        if (randomInt < 0) {
             returnValue = -1;
         } else {
-            if (someInt <= 1) {
+            if (randomInt <= 1) {
                 returnValue = 1;
             } else {
-                returnValue = someInt * factorial(someInt - 1);
+                returnValue = randomInt * factorial(randomInt - 1);
             }
         }
 
@@ -51,10 +51,10 @@ final class Main {
     */
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
-        System.out.print("Entered = ");
-        final int someInt = scanner.nextInt();
-        final int factorialOfInt = factorial(someInt);
-        System.out.println("Returned = " + factorialOfInt);
+        System.out.print("Before factoring = ");
+        final int randomInt = scanner.nextInt();
+        final int intFactorial = factorial(randomInt);
+        System.out.println("After factoring = " + intFactorial);
 
         System.out.println("\nDone.");
     }
