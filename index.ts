@@ -8,24 +8,24 @@
 
 import { createPrompt } from 'bun-promptx'
 
-function factorial(someInt: number): number {
+function factorial(randomInt: number): number {
   /*
   * This function calculates the factorial using recursion.
   */
-  if (someInt < 0) {
+  if (randomInt < 0) {
     return -1
   } else {
-    if (someInt <= 1) {
+    if (randomInt <= 1) {
       return 1
     } else {
-      return (someInt * factorial(someInt - 1))
+      return (randomInt * factorial(randomInt - 1))
     }
   }
 }
 
-const userInput = createPrompt(`Entered = `)
-const someInt = parseInt(userInput.value)
-let factorialOfInt = factorial(someInt)
-console.log(`Returned = ${factorialOfInt}`)
+const userInput = createPrompt(`Before factoring = `)
+const randomInt = parseInt(userInput.value)
+let IntFactorial = factorial(randomInt)
+console.log(`After factoring = ${IntFactorial}`)
 
 console.log(`\nDone.`)
